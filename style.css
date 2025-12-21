@@ -25,7 +25,7 @@ input {
     width: 220px;
     height: 40px;
     border-radius: 8px;
-    border: 2px solid #e38ddd;
+    border: 2px solid #e3ade0;
     padding-left: 7px;
 }
 
@@ -39,10 +39,29 @@ span {
     pointer-events: none;
     color: #e3ade0;
     background-color: transparent;
+    transition: all .2s ease-in-out;
 }
 
-span.active {
-    transform: translate(0px, -10px);
+input:focus ~ span {
+    transform: translate(0px, -22px);
     background-color: #e38ddd;
     color: white;
+    padding: 3px 5px;
+    font-size: 70%;
+    border-radius: 5px;
+}
+
+input:focus {
+    box-shadow: 0px 1px 5px #e38ddd;
+    border: 2px solid #e38ddd;
+    outline: none;
+}
+
+.active {
+    transform: translate(0px, -22px);
+    background-color: #e38ddd;
+    color: white;
+    padding: 3px 5px;
+    font-size: 70%;
+    border-radius: 5px;
 }
