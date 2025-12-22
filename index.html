@@ -8,32 +8,43 @@
 </head>
 <body>
 
-    <div id="wrapper">
+    <img id="webify" src="./images/webify.svg" alt="">
+    <img id="graphic" src="./images/signup-vector.svg" alt="">
+
+    <form id="wrapper" action="" method="post">
         <div id="first-name">
-            <input type="text">
+            <input type="text" required>
             <span>FIRST NAME</span>
         </div>
         <div id="last-name">
-            <input type="text">
+            <input type="text" required>
             <span>LAST NAME</span>
         </div>
         <div id="email">
-            <input type="email">
+            <input type="email" required>
             <span>EMAIL</span>
         </div>
         <div id="phone-number">
-            <input type="text">
+            <input type="text" pattern="\(\d{3}\) \d{3}-\d{4}" required>
             <span>PHONE NUMBER</span>
         </div>
         <div id="password">
-            <input type="password">
+            <input type="password" pattern="(?=.*[A-Z])(?=.*\d).{8,}" required>
             <span>PASSWORD</span>
+            <div id="strength">
+                <div id="weak"></div>
+                <div id="okay"></div>
+                <div id="strong"></div>
+            </div>
+            <div id="status"></div>
         </div>
         <div id="confirm-password">
-            <input type="password">
+            <input type="password" required>
             <span>CONFIRM PASSWORD</span>
         </div>
-    </div>
+        <button type="submit">Create Account</button>
+    </form>
+
 
 </body>
 <script src="script.js"></script>
