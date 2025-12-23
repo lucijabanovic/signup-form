@@ -45,7 +45,7 @@ email.addEventListener("focus", () => {
 
 number.addEventListener("focus", () => {
     if (number.value == '') {
-        number.placeholder = "e.g. (123) 456-7890";
+        number.placeholder = "e.g. 1234567890";
     }
 });
 
